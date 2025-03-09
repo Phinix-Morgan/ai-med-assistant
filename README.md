@@ -40,13 +40,14 @@
 ```sh
 # Clone the repository
 git clone https://github.com/Phinix-Morgan/ai-med-assistant.git
-cd medassist-ai
+cd ai-med-assistant
 
 # Install dependencies
 npm install
 
 # Start the backend server
-npx nodemon
+npm install -g nodemon  # First : Global install  
+npx nodemon    # Run 
 
 ## 🤝 Contributing
 Contributions are welcome! 
