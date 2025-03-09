@@ -1,6 +1,6 @@
 // Toggle navigation menu for mobile view
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
+var menuToggle = document.getElementById('menu-toggle');
+var navLinks = document.getElementById('nav-links');
 
 menuToggle.addEventListener('click', () => {
     // Toggle display of navigation links
