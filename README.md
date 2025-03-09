@@ -39,7 +39,7 @@
 ### Steps
 ```sh
 # Clone the repository
-git clone https://github.com/yourusername/medassist-ai.git
+git clone https://github.com/Phinix-Morgan/ai-med-assistant.git
 cd medassist-ai
 
 # Install dependencies
