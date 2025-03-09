@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Prescription Management</title>
+  <link rel="stylesheet" href="../stylesheets/index.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo"><img src="../images/13.png" height="40" width="60"> 
+             <a href="/signupx">MedPal-AI Chatbot</a>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="/home"><b>Home</b></a></li>
+        <li><a href="/about"><b>About</b></a></li>
+        <li><a href="/services"><b>Services</b></a></li>
+        <li><a href="/Review"><b>Review</b></a></li>
+        <li><a href="/contact"><b>Contact Us</b></a></li>
+      </ul>
+    </nav>
+    <button class="cta-button"><a href="/signupx"><b>Get Started</b></a></button>
+    
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your Doctor Buddy </h1>
+      <p><i>"Meet your 24/7 healthcare assistant—our AI chatbot offers instant, reliable advice, personalized health tips, appointment reminders, and more, all while prioritizing your privacy and delivering trusted information at your convenience."
+        .</p>
+     
+    </div>
+    <div class="hero-image">
+      <img src="../images/11.jpg" width="300" alt="Prescription management illustration">
+    </div>
+  </section>
+
+
+  <!-- Key Features Section -->
+  <section class="key-features">
+    <h2>Our Key Features</h2>
+    <div class="features-container">
+      <div class="feature-card" onclick="showFeatureDetails('Composition Information')">
+        <img src="../images/composition.jpg" alt="Medicine Composition Icon">
+        <h3>Symptom Checker</h3>
+        <p>View detailed information about the composition of each medicine.</p>
+      </div>
+      <div class="feature-card" onclick="showFeatureDetails('Prescription Tracking')">
+        <img src="../images/prescription.jpg" alt="Prescription Tracking Icon">
+        <h3>Health Tips</h3>
+        <p>Keep track of all your prescriptions in one place.</p>
+      </div>
+      <div class="feature-card" onclick="showFeatureDetails('Dosage Reminders')">
+        <img src="../images/dosage reminder.jpg" alt="Dosage Reminders Icon">
+        <h3>Emergency Services</h3>
+        <p>Set reminders for medication doses and never miss a dose.</p>
+      </div>
+      <div class="feature-card" onclick="showFeatureDetails('Refill Management')">
+        <img src="../images/refill management.jpg" alt="Refill Management Icon">
+        <h3>Health Tracker</h3>
+        <p>Easily manage and schedule refills for your prescriptions.</p>
+      </div>
+      <div class="feature-card" onclick="showFeatureDetails('Side Effect Notifications')">
+        <img src="../images/sideeff.jpg" alt="Side Effect Notifications Icon">
+        <h3>Mental Health Support</h3>
+        <p>Receive alerts for potential side effects of your medication.</p>
+      </div>
+      <div class="feature-card" onclick="showFeatureDetails('Doctor-Patient Interaction')">
+        <img src="../images/doctor pateint.jpg" alt="Doctor-Patient Interaction Icon">
+        <h3>Voice Chat Assistance</h3>
+        <p>Stay connected with healthcare providers for guidance.</p>
+      </div>
+    </div>
+  </section>
+
+   <!-- Benefits Section -->
+   <section class="benefits">
+    <h2>Why Choose Us?</h2>
+    <div class="benefits-container">
+      <div class="benefit-card" onclick="showBenefitDetails('Easy Management')">
+        <h3>24/7 Availability</h3>
+        <p>We’re here whenever you need us, offering instant support and guidance, day or night..</p>
+      </div>
+      <div class="benefit-card" onclick="showBenefitDetails('Data Security')">
+        <h3>Privacy & Safety</h3>
+        <p>Your health data is important, which is why we ensure the highest standards of data protection and confidentiality.</p>
+      </div>
+      <div class="benefit-card" onclick="showBenefitDetails('Medication Reminders')">
+        <h3>User-Friendly</h3>
+        <p>With an easy-to-use interface, our chatbot makes healthcare advice and assistance simple to access.</p>
+      </div>
+      <div class="benefit-card" onclick="showBenefitDetails('Professional Advice')">
+        <h3>Accuracy</h3>
+        <p>Our AI is powered by cutting-edge technology to provide accurate health information, tailored to your needs.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Pricing Section -->
+<section class="pricing">
+    <h2>Choose Your Plan</h2>
+    <div class="pricing-container">
+      <div class="pricing-card">
+        <h3>Basic</h3>
+        <p class="price">₹99/month</p>
+        <ul>
+          <li>Access to medicine composition</li>
+          <li>Prescription tracking</li>
+          <li>Email reminders</li>
+        </ul>
+        <button onclick="selectPlan('Basic')">Select Plan</button>
+      </div>
+      <div class="pricing-card featured">
+        <h3>Pro</h3>
+        <p class="price">₹199/month</p>
+        <ul>
+          <li>All Basic features</li>
+          <li>Dosage reminders</li>
+          <li>Refill management</li>
+          <li>Priority support</li>
+        </ul>
+        <button onclick="selectPlan('Pro')">Select Plan</button>
+      </div>
+      <div class="pricing-card">
+        <h3>Premium</h3>
+        <p class="price">₹299/month</p>
+        <ul>
+          <li>All Pro features</li>
+          <li>Side effect notifications</li>
+          <li>Doctor-patient interaction</li>
+          <li>Data security</li>
+        </ul>
+        <button onclick="selectPlan('Premium')">Select Plan</button>
+      </div>
+    </div>
+  </section>
+
+   <!-- FAQs Section -->
+   <section class="faqs">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faqs-container">
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="toggleAnswer(this)">What is the purpose of this app?</h3>
+        <p class="faq-answer">Our healthcare AI chatbot app provides instant, personalized health advice and support, making healthcare accessible, convenient, and efficient 24/7.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="toggleAnswer(this)">Is my data secure?</h3>
+        <p class="faq-answer">Yes, your data is secure. We prioritize your privacy and employ the highest standards of encryption and data protection to ensure that your personal health information is kept confidential and safe from unauthorized access.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="toggleAnswer(this)">Can I access my signup from multiple devices?</h3>
+        <p class="faq-answer">Yes, you can access your account from multiple devices. Simply log in using your credentials on any device, and your data and preferences will sync across all of them, ensuring a seamless experience.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question" onclick="toggleAnswer(this)">How can I contact support?</h3>
+        <p class="faq-answer">You can reach our support team via the contact form on our website or email us directly.</p>
+      </div>
+    </div>
+  </section>
+
+   <!-- Call to Action Section -->
+   <section class="cta">
+    <h2>Ready to Get Started?</h2>
+    <p>Join thousands of satisfied users who manage their prescriptions effortlessly.</p>
+    <button class="hero-cta"><a href="/signupx">Sign Up Now</a></button>
+  </section>
+  
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>MedPal</h3>
+        <p>Your health companion, 24/7.</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="#">Social Features</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Footer Page</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon">🔗</a>
+        <a href="#" class="social-icon">🐦</a>
+        <a href="#" class="social-icon">📱</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 HealthBot. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+  <script>
+    (function () {
+        if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+            window.chatbase = (...arguments) => {
+                if (!window.chatbase.q) {
+                    window.chatbase.q = [];
+                }
+                window.chatbase.q.push(arguments);
+            };
+            
+            window.chatbase = new Proxy(window.chatbase, {
+                get(target, prop) {
+                    if (prop === "q") {
+                        return target.q;
+                    }
+                    return (...args) => target(prop, ...args);
+                }
+            });
+        }
+
+        const onLoad = function () {
+            const script = document.createElement("script");
+            script.src = "https://www.chatbase.co/embed.min.js";
+            script.id = "bp_8bK_UcH3P9oMPxTpz8";
+            script.domain = "www.chatbase.co";
+            document.body.appendChild(script);
+        };
+
+        if (document.readyState === "complete") {
+            onLoad();
+        } else {
+            window.addEventListener("load", onLoad);
+        }
+    })();
+</script>
+
+<script src="../javascripts/index.js"></script>
+
+</body>
+</html>
+  

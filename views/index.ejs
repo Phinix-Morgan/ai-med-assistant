@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../stylesheets/signup.css">
+
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        #btnu{
+          margin-bottom: 10px;
+        }
+        #cc1{
+          color: white;
+        }
+    </style>
+</head>
+<body>
+
+
+      
+
+
+
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="xx1" placeholder="Username" required>
+        <input type="password" id="xx2" placeholder="Password" required>
+        <button id="btnu">Login</button><br>
+        <nav class="nav-menu">
+          <button>
+            <a id="cc1" href="/signupx">SignUp</a>
+          </button>
+        </nav>
+    </div>
+
+
+    
+<script>
+  const addButton = document.querySelector("#btnu");
+
+// Function to handle adding item
+addButton.addEventListener("click", () => {
+    const usernamex = document.querySelector("#xx1").value.trim();
+    const passwordx = document.querySelector("#xx2").value.trim();
+
+
+   
+
+
+
+
+    
+// Retrieve stored credentials from localStorage
+const storedUsername = localStorage.getItem('username');
+const storedPassword = localStorage.getItem('password');
+
+
+
+document.querySelector("#xx1").value = document.querySelector("#xx2").value = "";
+
+   // Validate credentials
+   if (usernamex === storedUsername && passwordx === storedPassword) {
+    // Redirect to dashboard on success
+    // Save to localStorage (plain text for demo only - NOT secure)
+
+    alert('login successful!');
+    console.log("sucessfull");
+    window.location.href = '/home'; // Adjust path
+  }
+   else {
+    alert('error!');
+    console.log("error");
+  }
+
+
+});
+
+
+
+
+</script>
+
+
+
+
+
+
+
+<script src="../javascripts/index.js"></script>
+</body>
+</html>
