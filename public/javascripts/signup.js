@@ -1,29 +1,65 @@
-// Toggle navigation menu for mobile view
-var menuToggle = document.getElementById('menu-toggle');
-var navLinks = document.getElementById('nav-links');
 
-menuToggle.addEventListener('click', () => {
-    // Toggle display of navigation links
-    navLinks.classList.toggle('show');
-    // Toggle active class for menu button animation
-    menuToggle.classList.toggle('active');
+  const addButtonx = document.querySelector("#btnx");
+
+// Function to handle adding item
+addButtonx.addEventListener("click", () => {
+    const username = document.querySelector("#username").value.trim();
+    const password = document.querySelector("#password").value.trim();
+
+
+
+    const xx=1;
+    const zz=2;
+
+
+
+     // Save to localStorage (plain text for demo only - NOT secure)
+localStorage.setItem('username', username);
+localStorage.setItem('password', password);
+
+
+
+/*
+    // Retrieve items from localStorage
+    let itemJsonArray = localStorage.getItem('itemsJson') ? JSON.parse(localStorage.getItem('itemsJson')) : [];
+
+    // Add new item to the array
+    itemJsonArray.push({ username,password });
+
+
+    // Clear input fields
+    document.querySelector("#xx1").value = document.querySelector("#xx2").value = "";
+
+
+    // Update localStorage with the modified array
+    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+
+    // Update the table
+    updatex(itemJsonArray);
+
+
+    */
+
+
+    document.querySelector("#xx1").value = document.querySelector("#xx2").value = "";
+
+
+// Validate credentials
+if (xx=== 1 && zz === 2) {
+ // Redirect to dashboard on success
+ // Save to localStorage (plain text for demo only - NOT secure)
+
+ alert('registered sucessfully. now nevigate to Login');
+ console.log("well done");
+ window.location.href = '/home'; // Adjust path
+}
+else {
+ alert('error!!!');
+ console.log("error!!!");
+}
+
+
+
 });
 
-// Form validation and submission
-document.getElementById('signupForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
-    const formMessage = document.getElementById('formMessage');
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-  
-    // Check if password and confirm password match
-    if (password !== confirmPassword) {
-      formMessage.textContent = "Passwords do not match. Please try again.";
-      formMessage.style.color = "#dc3545"; // Error color
-    } else {
-      formMessage.textContent = "Successfully registered! Welcome to MediCare.";
-      formMessage.style.color = "#28a745"; // Success color
-      this.reset(); // Reset the form
-    }
-  });
-  
+
